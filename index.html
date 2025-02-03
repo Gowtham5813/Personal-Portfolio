@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/720964f193.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <!-- <img src="Portfolio-Image/gowtham-new photo3.png" class="logo" /> -->
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <i class="fa-regular fa-circle-xmark"></i>
+          </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-text">
+          <p>Software Engineer</p>
+          <h1>
+            Hi,I'm <span>Gowtham </span><br />
+            from India
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!---About Section---->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Portfolio-Image/gow-removebg-preview.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              I am Avala Gowtham, a passionate software engineer and web
+              developer with a Bachelor’s degree in Computer Science &
+              Engineering. With hands-on experience in JavaScript,
+              React,Node.js,MongoDB,SQL, C,Java,Python I am dedicated to
+              building scalable and user-friendly web applications. My projects,
+              including an Amazon shopping platform and a document-based chatbot
+              using Langchain, showcase my ability to blend creativity with
+              technical expertise. I am enthusiastic about leveraging my skills
+              in a dynamic environment to innovate and deliver impactful
+              software solutions.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Software Engineer </span><br />Software Development
+                </li>
+                <li><span>Web Development </span><br />Web app Development</li>
+                <li>
+                  <span>Front end Development </span><br />Front end Development
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Software Engineer Intern </span><br />The Skidoo</li>
+                <li>
+                  <span>Full Stack Developer</span><br />TAGV Embedded Private
+                  Solutions
+                </li>
+                <li>
+                  <span>Artificial Intelligence Intern </span><br />SkillDzire
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2020-2024</span><br />University College of Engineering
+                  Narsaraopeta-JNTUK
+                </li>
+                <li>
+                  <span>2018-2020</span><br />Sri Chaitanya Junior College
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----services-->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>Information is here</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>Amazon Shipping Platform</h2>
+            <p>Information is here</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store-ios"></i>
+            <h2>Weather Data Monitoring Dashboard</h2>
+            <p>Information is here</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------Portfolio-------->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="Portfolio-Image/docbot-image.jpg" />
+            <div class="layer">
+              <h3>Docbot using Langchain</h3>
+              <p>It easily analyzes the document and gives the answer easily</p>
+              <a href=""><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Portfolio-Image/Amazon-shipping.jpg" />
+            <div class="layer">
+              <h3>E-commerce Platform</h3>
+              <p>It easily analyzes the document and gives the answer easily</p>
+              <a href=""><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Portfolio-Image/weather-data-image.jpg" />
+            <div class="layer">
+              <h3>Weather Data Monitoring DashBoard</h3>
+              <p>It easily analyzes the document and gives the answer easily</p>
+              <a href=""><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!---conact-->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>gouthamavala@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>7396902286</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/gowtham-avala-2b319a274/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://instagram.com"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+            <a
+              href="Portfolio-Image/Gowtham New 93.pdf"
+              download
+              class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Messgae"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright Gowtham. Made with <i class="fa-solid fa-heart"></i> Love
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
