@@ -1,0 +1,6 @@
+[submodule "Portfolio"]
+    path = Portfolio
+    url = https://github.com/Gowtham5813/Personal-Portfolio
+[submodule "Personal-Portfolio"]
+	path = Personal-Portfolio
+	url = https://github.com/Gowtham5813/Personal-Portfolio
