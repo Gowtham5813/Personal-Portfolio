@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        color: blue;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="internship-title"></h1>
+      <p><strong>Company:</strong> <span id="internship-company"></span></p>
+      <p><strong>Role:</strong> <span id="internship-role"></span></p>
+      <p><strong>Duration:</strong> <span id="internship-duration"></span></p>
+      <p>
+        <strong>Technologies Used:</strong> <span id="internship-tech"></span>
+      </p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul id="internship-achievements"></ul>
+      <p>
+        <strong>Skills Gained:</strong> <span id="internship-skills"></span>
+      </p>
+      <!-- <p>
+        <strong>Project Link:</strong> -->
+      <!-- <a id="internship-link" href="#" target="_blank">Code Link</a> -->
+      <!-- </p>  -->
+      <a href="index.html" class="back-link">🔙 Back to Internships</a>
+    </div>
+
+    <script>
+      // Internship Data (Replace with actual data)
+      const internships = {
+        skidoo: {
+          company: "The Skidoo",
+          role: "Software Engineer Intern",
+          duration: "Feb 2024 - Apr 2024",
+          technologies: "React.js, Node.js, MongoDB",
+          achievements: [
+            "Built a full-stack dashboard",
+            "Implemented authentication system",
+          ],
+          skills: "Full Stack Development, API Integration",
+          //   link: "https://your-project-link.com"
+        },
+        tagv: {
+          company: "TAGV Embedded Solutions Pvt Ltd.",
+          role: "Full Stack Developer Intern",
+          duration: "Jun 2023 - Aug 2023",
+          technologies: "Django, React, PostgreSQL",
+          achievements: [
+            "Developed an internal reporting tool",
+            "Optimized database queries",
+          ],
+          skills: "Backend Development, Performance Optimization",
+          link: "https://your-project-link.com",
+        },
+        skilldzire: {
+          company: "SkillDzire",
+          role: "Artificial Intelligence Intern",
+          duration: "Jun 2022 - Aug 2022",
+          technologies: "Python, TensorFlow, NLP",
+          achievements: ["Worked on AI chatbot", "Trained an NLP model"],
+          skills: "Machine Learning, NLP",
+          link: "https://your-project-link.com",
+        },
+      };
+
+      // Get URL Parameter
+      const params = new URLSearchParams(window.location.search);
+      const internshipId = params.get("id");
+
+      // Populate Details
+      if (internshipId && internships[internshipId]) {
+        const data = internships[internshipId];
+        document.getElementById("internship-title").innerText = data.role;
+        document.getElementById("internship-company").innerText = data.company;
+        document.getElementById("internship-role").innerText = data.role;
+        document.getElementById("internship-duration").innerText =
+          data.duration;
+        document.getElementById("internship-tech").innerText =
+          data.technologies;
+        document.getElementById("internship-skills").innerText = data.skills;
+        document.getElementById("internship-link").href = data.link;
+
+        // Add Achievements
+        const achievementsList = document.getElementById(
+          "internship-achievements"
+        );
+        data.achievements.forEach((achievement) => {
+          let li = document.createElement("li");
+          li.innerText = achievement;
+          achievementsList.appendChild(li);
+        });
+      } else {
+        document.querySelector(".container").innerHTML =
+          "<h1>Internship Not Found</h1>";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details</title>
+    <style>
+      /* General Body and Container Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f7fb;
+        color: #333;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 20px;
+      }
+
+      /* Header and Title */
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      /* Project Section Styles */
+      #project-details {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+      }
+
+      #project-details img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      /* Project Information Styles */
+      #project-description {
+        font-size: 1.1rem;
+        color: #7f8c8d;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      #project-tech {
+        font-size: 1.1rem;
+        color: #7f8c8d;
+        margin-bottom: 20px;
+      }
+
+      /* Features List */
+      #project-features {
+        margin: 20px 0;
+        padding-left: 20px;
+      }
+
+      #project-features li {
+        font-size: 1rem;
+        margin: 5px 0;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      /* Project Link */
+      #project-link {
+        font-size: 1.2rem;
+        color: #3498db;
+        text-decoration: none;
+        padding: 10px;
+        background-color: #ecf0f1;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+
+      #project-link:hover {
+        background-color: #3498db;
+        color: white;
+      }
+
+      /* Back Button */
+      .back-button {
+        font-size: 1rem;
+        color: #fff;
+        background-color: #2c3e50;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 30px;
+        transition: background-color 0.3s;
+      }
+
+      .back-button:hover {
+        background-color: #34495e;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="project-details" class="container">
+      <h1 id="project-title"></h1>
+      <p id="project-description"></p>
+      <h2>Technologies Used</h2>
+      <p id="project-tech"></p>
+      <h2>Project Link</h2>
+      <a id="project-link" href="" target="_blank">View Project</a>
+
+      <h2>Project Features</h2>
+      <ul id="project-features"></ul>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get("id");
+
+      const projects = {
+        docbot: {
+          title: "Docbot using Langchain",
+          description:
+            "It easily analyzes the document and gives the answer easily",
+          technologies: "Langchain, NLP, Python",
+          link: "https://github.com/Gowtham5813/DocBot-using-LangChain-Application.git",
+          features: [
+            "Analyze any uploaded document",
+            "Answer questions based on document content",
+          ],
+        },
+        ecommerce: {
+          title: "E-commerce Platform",
+          description:
+            "It allows users to browse products, add them to the cart, and complete purchases seamlessly",
+          technologies: "HTML, CSS, JavaScript, LocalStorage",
+          link: "https://github.com/Gowtham5813/javascript-amazon-project-main.git",
+          features: [
+            "User Authentication",
+            "Product Search and Filtering",
+            "Cart Management",
+          ],
+        },
+        weather: {
+          title: "Weather Data Monitoring DashBoard",
+          description:
+            "It provides interactive charts and insights for better analysis and decision-making",
+          technologies: "JavaScript, Chart.js, API Integration",
+          link: "https://your-project-link.com",
+          features: [
+            "Real-time weather data",
+            "Interactive charts",
+            "Weather forecast analysis",
+          ],
+        },
+      };
+
+      if (projectId && projects[projectId]) {
+        const data = projects[projectId];
+        document.getElementById("project-title").innerText = data.title;
+        document.getElementById("project-description").innerText =
+          data.description;
+        document.getElementById("project-tech").innerText = data.technologies;
+        document.getElementById("project-link").href = data.link;
+
+        const featuresList = document.getElementById("project-features");
+        data.features.forEach((feature) => {
+          let li = document.createElement("li");
+          li.innerText = feature;
+          featuresList.appendChild(li);
+        });
+      }
+    </script>
+  </body>
+</html>
