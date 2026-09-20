@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141c2e"/><stop offset="1" stop-color="#341f45"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <g transform="translate(70,330)">
+    <g fill="#262626" stroke="rgba(255,255,255,.1)">
+      <rect x="0" y="80" width="54" height="120" rx="8"/>
+      <rect x="74" y="30" width="54" height="170" rx="8"/>
+      <rect x="148" y="110" width="54" height="90" rx="8"/>
+      <rect x="222" y="0" width="54" height="200" rx="8"/>
+    </g>
+    <g fill="#ff004f">
+      <rect x="0" y="150" width="54" height="50" rx="8"/>
+      <rect x="74" y="110" width="54" height="90" rx="8"/>
+      <rect x="148" y="160" width="54" height="40" rx="8"/>
+      <rect x="222" y="70" width="54" height="130" rx="8"/>
+    </g>
+    <line x1="-10" y1="212" x2="300" y2="212" stroke="rgba(255,255,255,.18)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(560,300)">
+    <circle cx="70" cy="30" r="46" fill="#ff004f" opacity="0.85"/>
+    <path d="M10 110 a44 44 0 0 1 44 -44 a56 56 0 0 1 104 12 a34 34 0 0 1 -8 68 h-108 a34 34 0 0 1 -32 -36 z"
+          fill="#262626" stroke="rgba(255,255,255,.16)" stroke-width="3"/>
+  </g>
+  <text x="70" y="150" fill="#ffffff" font-family="Poppins, Arial, sans-serif" font-size="54" font-weight="bold">Weather Insights</text>
+  <text x="70" y="212" fill="#ffffff" font-family="Poppins, Arial, sans-serif" font-size="54" font-weight="bold">Dashboard</text>
+  <text x="70" y="262" fill="#b5b5c3" font-family="Poppins, Arial, sans-serif" font-size="27">Django · Python · SQL</text>
+</svg>

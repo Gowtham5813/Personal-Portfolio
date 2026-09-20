@@ -3,121 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Internship Details</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f4f4f4;
-      }
-      .container {
-        max-width: 800px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-      }
-      h1 {
-        text-align: center;
-      }
-      .back-link {
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-        text-decoration: none;
-        color: blue;
-        font-size: 18px;
-      }
-    </style>
+    <title>Experience Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
+    <script
+      src="https://kit.fontawesome.com/720964f193.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container">
-      <h1 id="internship-title"></h1>
-      <p><strong>Company:</strong> <span id="internship-company"></span></p>
-      <p><strong>Role:</strong> <span id="internship-role"></span></p>
-      <p><strong>Duration:</strong> <span id="internship-duration"></span></p>
-      <p>
-        <strong>Technologies Used:</strong> <span id="internship-tech"></span>
-      </p>
-      <p><strong>Key Achievements:</strong></p>
-      <ul id="internship-achievements"></ul>
-      <p>
-        <strong>Skills Gained:</strong> <span id="internship-skills"></span>
-      </p>
-      <!-- <p>
-        <strong>Project Link:</strong> -->
-      <!-- <a id="internship-link" href="#" target="_blank">Code Link</a> -->
-      <!-- </p>  -->
-      <a href="index.html" class="back-link">🔙 Back to Internships</a>
+    <button
+      class="theme-toggle floating"
+      type="button"
+      onclick="toggleTheme()"
+      aria-label="Switch theme"
+    >
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.6" />
+        <g class="sun-rays">
+          <line x1="12" y1="1.6" x2="12" y2="4.2" />
+          <line x1="12" y1="19.8" x2="12" y2="22.4" />
+          <line x1="1.6" y1="12" x2="4.2" y2="12" />
+          <line x1="19.8" y1="12" x2="22.4" y2="12" />
+          <line x1="4.6" y1="4.6" x2="6.4" y2="6.4" />
+          <line x1="17.6" y1="17.6" x2="19.4" y2="19.4" />
+          <line x1="4.6" y1="19.4" x2="6.4" y2="17.6" />
+          <line x1="17.6" y1="6.4" x2="19.4" y2="4.6" />
+        </g>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z" />
+      </svg>
+    </button>
+    <div class="detail-page">
+      <a href="index.html#services" class="detail-back">
+        <i class="fa-solid fa-arrow-left"></i> Back to Experience
+      </a>
+
+      <div id="detail-body">
+        <p class="detail-eyebrow" id="internship-company"></p>
+        <h1 id="internship-title"></h1>
+        <p class="detail-lead" id="internship-summary"></p>
+
+        <div class="detail-grid">
+          <div class="detail-card">
+            <h2>Key Achievements</h2>
+            <ul id="internship-achievements"></ul>
+          </div>
+          <div class="detail-card">
+            <div class="detail-meta">
+              <div>
+                <span>DURATION</span>
+                <p id="internship-duration"></p>
+              </div>
+              <div>
+                <span>LOCATION</span>
+                <p id="internship-location"></p>
+              </div>
+              <div>
+                <span>SKILLS GAINED</span>
+                <p id="internship-skills"></p>
+              </div>
+              <div>
+                <span>TECHNOLOGIES</span>
+                <div class="tag-list" id="internship-tech"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <a href="index.html#contact" class="btn btn2">Get In Touch</a>
+        </div>
+      </div>
     </div>
 
     <script>
-      // Internship Data (Replace with actual data)
       const internships = {
+        tabletop: {
+          company: "Table Top Technologies",
+          role: "Software Engineer",
+          duration: "Apr 2025 - Present",
+          location: "Onsite · Hyderabad, Telangana, India",
+          summary:
+            "My first full-time engineering role, working across the stack on production software. On the backend I develop and optimize services in PHP and Laravel and the REST APIs that serve them, improving API performance and data processing efficiency by 40%. On the front end I modernize legacy Angular modules, cutting page load time by 25% and making the application noticeably more responsive. Claude AI is part of my daily workflow here - code generation, debugging, refactoring, documentation and rapid prototyping across 10+ feature implementations - and working with cross-functional teams to ship production-ready features has brought reported defects down by 25%.",
+          technologies: [
+            "PHP",
+            "Laravel",
+            "Angular",
+            "REST APIs",
+            "MySQL",
+            "Claude AI",
+          ],
+          achievements: [
+            "Developed and optimized backend services using PHP, Laravel and REST APIs, improving API performance and data processing efficiency by 40%",
+            "Enhanced legacy Angular modules, reducing page load time by 25%",
+            "Leveraged Claude AI across 10+ feature implementations for code generation, debugging, refactoring, documentation and rapid prototyping",
+            "Collaborated with cross-functional teams to ship production-ready features, reducing reported defects by 25%",
+            "Won the organization-level hackathon with OmniTrace, an AI-powered trading assistant",
+          ],
+          skills:
+            "Backend Development, REST API Design, Angular, AI-Assisted Engineering",
+        },
         skidoo: {
           company: "The Skidoo",
           role: "Software Engineer Intern",
           duration: "Feb 2024 - Apr 2024",
-          technologies: "React.js, Node.js, MongoDB",
+          location: "Remote · California, United States",
+          summary:
+            "A full-stack internship spent on an internal dashboard, working from the React interface down through the Node.js API layer to MongoDB. I built the dashboard itself along with the authentication system securing it, and integrated the REST endpoints feeding its views - my first sustained experience owning a feature across every layer of an application.",
+          technologies: ["React.js", "Node.js", "MongoDB"],
           achievements: [
             "Built a full-stack dashboard",
             "Implemented authentication system",
           ],
           skills: "Full Stack Development, API Integration",
-          //   link: "https://your-project-link.com"
         },
         tagv: {
           company: "TAGV Embedded Solutions Pvt Ltd.",
           role: "Full Stack Developer Intern",
           duration: "Jun 2023 - Aug 2023",
-          technologies: "Django, React, PostgreSQL",
+          location: "Onsite · Hyderabad, Telangana, India",
+          summary:
+            "Developed an internal reporting tool on Django, React and PostgreSQL, covering both the interface engineers used and the queries behind it. A good part of the work was performance: profiling and optimizing the database queries driving the reports so they returned quickly as the data grew, which is where I started thinking about backend efficiency rather than just correctness.",
+          technologies: ["Django", "React", "PostgreSQL"],
           achievements: [
             "Developed an internal reporting tool",
             "Optimized database queries",
           ],
           skills: "Backend Development, Performance Optimization",
-          link: "https://your-project-link.com",
         },
         skilldzire: {
           company: "SkillDzire",
           role: "Artificial Intelligence Intern",
           duration: "Jun 2022 - Aug 2022",
-          technologies: "Python, TensorFlow, NLP",
+          location: "Remote · Guntur, Andhra Pradesh, India",
+          summary:
+            "An AI-focused internship working with Python, TensorFlow and NLP. I trained an NLP model and helped build a conversational AI chatbot on top of it, covering data preparation, training and evaluation. This is where my interest in language models started - the thread that runs through my later work with LangChain, Claude AI and Gemini.",
+          technologies: ["Python", "TensorFlow", "NLP"],
           achievements: ["Worked on AI chatbot", "Trained an NLP model"],
           skills: "Machine Learning, NLP",
-          link: "https://your-project-link.com",
         },
       };
 
-      // Get URL Parameter
       const params = new URLSearchParams(window.location.search);
-      const internshipId = params.get("id");
+      const data = internships[params.get("id")];
 
-      // Populate Details
-      if (internshipId && internships[internshipId]) {
-        const data = internships[internshipId];
-        document.getElementById("internship-title").innerText = data.role;
+      if (!data) {
+        document.getElementById("detail-body").innerHTML =
+          '<h1>Experience Not Found</h1><p class="detail-lead">Pick a role from the portfolio to see its details.</p>';
+      } else {
+        document.title = data.role + " | " + data.company;
         document.getElementById("internship-company").innerText = data.company;
-        document.getElementById("internship-role").innerText = data.role;
+        document.getElementById("internship-title").innerText = data.role;
+        document.getElementById("internship-summary").innerText = data.summary;
         document.getElementById("internship-duration").innerText =
           data.duration;
-        document.getElementById("internship-tech").innerText =
-          data.technologies;
+        document.getElementById("internship-location").innerText =
+          data.location;
         document.getElementById("internship-skills").innerText = data.skills;
-        document.getElementById("internship-link").href = data.link;
 
-        // Add Achievements
+        const tech = document.getElementById("internship-tech");
+        data.technologies.forEach((t) => {
+          const span = document.createElement("span");
+          span.innerText = t;
+          tech.appendChild(span);
+        });
+
         const achievementsList = document.getElementById(
           "internship-achievements"
         );
         data.achievements.forEach((achievement) => {
-          let li = document.createElement("li");
+          const li = document.createElement("li");
           li.innerText = achievement;
           achievementsList.appendChild(li);
         });
-      } else {
-        document.querySelector(".container").innerHTML =
-          "<h1>Internship Not Found</h1>";
       }
     </script>
   </body>
